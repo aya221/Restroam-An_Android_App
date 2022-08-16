@@ -1,0 +1,19 @@
+This project has been developed in the context of the course "Praktikum - Internet Telecooperation SS2022" provided by the group Telecooperation, headed by Prof. Dr. Max Mühlhäuser, in Faculty nr.20 Computer science in the university "Technical University Darmstadt". It had been developed by Group J in the course whose members are: Aya Chemangui, Ahmed Fourati, Aziz Chikh, Manuel Scheurich, Jan-Christoph Cramer, and Idris Babay
+
+For a detailed description of this project refer to the file located in "./deliverables/restreoam_report.pdf". It encompasses motivation of the project, implemented features, the user guide, and the technical overview.
+
+There are 2 ways of starting the App:
+I) Run the bundled version (production):
+	1) Copy the APK file located in "./deliverables/submission_APK.apk" into your Android phone or Emulator.
+	2) Open the APK App. There is no need to start the backend server as it had been deployed to Heroku and is already up and running.
+II) Run the servers locally (development):
+	1) After pulling the git repository, make sure that you create two terminals to run the App. One is for the Frontend (FE) and the other one for the backend part (BE). The App is built with react-native and expo 
+	2) If you don’t have expo installed on your pc, please install it by executing the following command: npm install --global expo-cli
+	3) Open terminal in the folder "./frontend": i)npm install ii)yarn install iii)expo start
+ 	4) Make sure that you have the newest version. If you need a new update, please execute the command shown in the terminal + Change your Network profile in the properties of your WLAN from public to private.
+	5) Now you will get a QR Code, developer tools running and metro waiting on exp://…. Please use your phone to test the App, since every emulator that we used had problems with the NSFW functionality that we implemented. 
+	6) Copy the ip address given by expo (e.g: Metro waiting on exp://192.168.2.147:19000 → copy 192.168.2.147)
+	7) Paste the ip address in the file "restroam/frontend/src/constants.js" in HOST_IP_ADDRESS constant.
+	8) Open terminal in the folder "./backend": i)npm install ii)node .\index.js (to run the server)
+	9)	* Using phone: i) Download the Expo App from the Android store ii) Scan the QR Code with the Expo App on your phone. At this point, if all servers work properly, you should be able to load the App. For some devices, it only works in tunnel mode. If you face this issue, change the type of connection from LAN to  to Tunnel in the developer tools. Another option to open the developer tools is by pressing the key "d" in the terminal.
+		* Using an Emulator: After executing expo start, press a in the terminal so that the App will be run on the emulator. Download the expo App and any updates of expo if these aren’t on your emulator. On all the emulators that we used, all functionalities work properly except for the NSFW. We recommend using a real phone instead, to be able to explore the NSFW functionality.
